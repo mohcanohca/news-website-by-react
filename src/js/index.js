@@ -1,7 +1,11 @@
+import printMe from './print';
 const React=require('react');
 const ReactDOM=require('react-dom');
 
 ReactDOM.render(
-    <h1>hello world!!!</h1>,
+    <div>
+        <h1>hello world!hot???</h1>
+        <button onClick={printMe}>print</button>
+    </div>,
     document.getElementById('app')
 );
