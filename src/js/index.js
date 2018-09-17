@@ -5,6 +5,14 @@ import Footer from './components/Footer';
 import Body from './components/Body';
 
 class Index extends React.Component{
+    componentWillMount(){
+        console.log('Index--componentWillMount')
+    }
+
+    componentDidMount(){
+        console.log('Index--componentDidMount')
+    }
+
     render(){
         return (
             <div>

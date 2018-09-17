@@ -18,12 +18,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js?$/,//正则，解析所有的js文件
+                test: /\.jsx?$/,//正则，解析所有的js文件
                 exclude: /(node_modules)/,//跳过的文件
                 loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-react', '@babel/preset-env']
-                }
+                /*options: {
+                    presets: ['@babel/preset-react', '@babel/preset-env'],
+                }*/
             }
         ]
     },
@@ -34,7 +34,7 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             inject: true
-        })
+        }),
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
