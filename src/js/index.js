@@ -1,11 +1,28 @@
-import printMe from './print';
-const React=require('react');
-const ReactDOM=require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Body from './components/Body';
 
-ReactDOM.render(
-    <div>
-        <h1>hello world!hot???</h1>
-        <button onClick={printMe}>print</button>
-    </div>,
-    document.getElementById('app')
-);
+class Index extends React.Component{
+    componentWillMount(){
+        console.log('Index--componentWillMount')
+    }
+
+    componentDidMount(){
+        console.log('Index--componentDidMount')
+    }
+
+    render(){
+        return (
+            <div>
+                <Header/>
+                <Body/>
+                <Footer/>
+            </div>
+
+        )
+    }
+}
+
+ReactDOM.render(<Index/>,document.getElementById('app'));
