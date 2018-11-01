@@ -4,20 +4,20 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Body from './components/Body';
 
-class Index extends React.Component{
-    componentWillMount(){
+class Index extends React.Component {
+    componentWillMount() {
         console.log('Index--componentWillMount')
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log('Index--componentDidMount')
     }
 
-    render(){
+    render() {
         return (
             <div>
                 <Header/>
-                <Body/>
+                <Body id='bodybody'/>
                 <Footer/>
             </div>
 
@@ -25,4 +25,4 @@ class Index extends React.Component{
     }
 }
 
-ReactDOM.render(<Index/>,document.getElementById('app'));
+ReactDOM.render(<Index/>, document.getElementById('app'));

@@ -1,56 +1,39 @@
 import React from 'react';
+import BodyChild from './BodyChild';
 
 class Body extends React.Component {
     constructor() {
-        super();
+        super();//调用基类的所有的初始化方法
         this.state = {
-            clicked: false,
+            name: 'ydz',
+            hobby: '...',
         }
     }
 
-    componentWillMount() {
-        console.log('Body--componentWillMount')
-    }
-
-    componentDidMount() {
-        console.log('Body--componentDidMount')
+    showHobby(hobby) {
+        console.log(hobby);
     }
 
     render() {
-        let userName = 'Sunny';
-        let able = false;
 
-        let html1 = "practice\u0020jsx";
-        let html2 = "practice&nbsp;jsx";
-
-        let {clicked} = this.state;
+        let it = this;
+        setTimeout(function () {
+            it.setState({
+                name: 'ss',
+                hobby: 'walking'
+            })
+        }, 4000);
         return (
-            <div style={{
-                backgroundColor: clicked ? 'red' : '#fff',
-            }}>
+            <div>
                 <h2>页面主体内容</h2>
-                {/*三元表达式*/}
-                <p>{userName === '' ? '用户没有登录' : '用户名：' + userName}</p>
-                {/*动态绑定属性值*/}
-                <input type="text" disabled={able}/>
-
-                {/*需要进行Unicode转码*/}
-                <p>{html1}</p>
-
-                {/*无需进行转码，但是操作不安全*/}
-                <p dangerouslySetInnerHTML={{__html: html1}}></p>
-
-                <button onClick={this.changColor.bind(this)}>点击改变颜色</button>
+                <p>
+                    {this.state.name + ' like ' + this.state.hobby}
+                </p>
+                {/*将本节点接受的所有properties向下传递的快捷方式*/}
+                <BodyChild {...this.props} name='bean' showHobby={this.showHobby}></BodyChild>
             </div>
         )
     }
-
-    changColor=() =>{
-        let {clicked} = this.state;
-        this.setState({
-            clicked: !clicked
-        })
-    };
 }
 
 export default Body;
