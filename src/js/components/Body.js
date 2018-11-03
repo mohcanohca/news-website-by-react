@@ -30,7 +30,7 @@ class Body extends React.Component {
                     {this.state.name + ' like ' + this.state.hobby}
                 </p>
                 {/*将本节点接受的所有properties向下传递的快捷方式*/}
-                <BodyChild {...this.props} name='bean' showHobby={this.showHobby}></BodyChild>
+                <BodyChild {...this.props} name='bean' showHobby={this.showHobby}/>
             </div>
         )
     }

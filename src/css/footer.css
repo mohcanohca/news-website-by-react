@@ -1,0 +1,9 @@
+.minifooter {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 0px 10px 15px;
+}
+
+.minifooter p {
+    font-size: 15px;
+}

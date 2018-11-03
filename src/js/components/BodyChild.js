@@ -22,5 +22,5 @@ BodyChild.defaultProps = {
 };
 //验证接受的properties的属性
 BodyChild.propTypes = {
-    name: PropTypes.string.isRequire,
+    name: PropTypes.string.isRequired,
 };

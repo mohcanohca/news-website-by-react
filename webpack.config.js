@@ -24,6 +24,24 @@ module.exports = {
                 /*options: {
                     presets: ['@babel/preset-react', '@babel/preset-env'],
                 }*/
+            },
+            {
+                test: /\.css$/,
+                //下面是css的loader，也即是css模块化的配置方法。可参考https://webpack.docschina.org/loaders/css-loader/
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]__[hash:base64:5]'
+                        }
+
+                    }
+                ],
             }
         ]
     },
