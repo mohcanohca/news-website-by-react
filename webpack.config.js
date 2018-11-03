@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');//在每次构建前�
 module.exports = {
     context: path.join(__dirname),
     entry: {
-        app: "./src/js/index.js",
+        app: "./src/js/root.js",
         // print: './src/js/print.js'
     },//多个入口地址
     devtool: 'inline-source-map',//将编译后的代码映射回原始源代码，用于问题定位
