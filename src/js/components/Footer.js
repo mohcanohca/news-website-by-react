@@ -5,7 +5,7 @@ let footerStyle = require("../../css/footer.css");
 class Footer extends React.Component {
 
     render() {
-        console.log(footerStyle);//{minifooter: "footer__minifooter__1HbTE"}
+        // console.log(footerStyle);//{minifooter: "footer__minifooter__1HbTE"}
         return (
 
             <footer className={footerStyle.minifooter}>

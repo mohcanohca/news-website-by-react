@@ -14,11 +14,11 @@ class Root extends React.Component {
                     <nav>
                         <ul>
                             <li><Link to='/'>首页</Link></li>
-                            <li><Link to='/list'>列表页</Link></li>
+                            <li><Link to='/list/1234'>列表页</Link></li>
                         </ul>
                     </nav>
                     <Route exact component={Index} path='/'/>
-                    <Route component={ComponentList} path='/list'/>
+                    <Route component={ComponentList} path='/list/:id'/>
                 </div>
 
             </Router>
